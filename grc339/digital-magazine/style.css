@@ -10,7 +10,7 @@ html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
 body {
     background: #fff1ee;
     color: #1f6f63;
-    font-family: "Avenir Next", sans-serif;
+    font-family: "ff-seria-sans", sans-serif;
     line-height: 1.45;
 }
 
@@ -110,7 +110,7 @@ figure img {
 
 h2 {
     color: #1f6f63;
-    font-family: "Georgia Pro", serif;
+    font-family: "reross-quadratic", serif;
     font-size: 1.6rem;
     font-weight: 400;
     line-height: .98;
@@ -220,7 +220,7 @@ main.gallery {
 }
 
 .side-notes h2 {
-    font-family: "Avenir Next", sans-serif;
+    font-family: "ff-seria-sans", sans-serif;
     font-size: 1rem;
     font-weight: 800;
     letter-spacing: .02rem;
@@ -309,7 +309,7 @@ main.newsletter {
 
 .newsletter label {
     color: #1f6f63;
-    font-family: "Avenir Next", sans-serif;
+    font-family: "ff-seria-sans", sans-serif;
     font-size: 1rem;
     font-weight: 700;
 }
