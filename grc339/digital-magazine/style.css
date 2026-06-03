@@ -1,0 +1,644 @@
+/* CSS document */
+
+html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit;}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff1ee;
+    color: #1f6f63;
+    font-family: "ff-seria-sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.45;
+}
+
+div.container {
+    max-width: 42rem;
+    margin: auto;
+    padding: 0 1.1rem;
+}
+
+div.container:has(main.gallery) {
+    max-width: 72rem;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+header {
+    border-bottom: 1px solid #dec8da;
+    padding: 1.75rem 0 1.2rem;
+    margin-bottom: 1.9rem;
+}
+
+h1 {
+    width: 19rem;
+}
+
+h1,
+nav {
+    margin-bottom: 1rem;
+}
+
+h1 img {
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem 1.15rem;
+}
+
+nav ul li {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .075rem;
+    text-transform: uppercase;
+}
+
+nav ul li a {
+    min-height: 2.25rem;
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 0;
+    padding: .2rem 0;
+    background: #fff1ee;
+    color: #1f6f63;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #f42ac4;
+}
+
+a:focus,
+button:focus,
+input:focus {
+    outline: none;
+}
+
+a {
+    color: #1f6f63;
+}
+
+.lead-story a,
+.story-list a,
+.side-notes a,
+.teasers a {
+    text-decoration: none;
+}
+
+figure {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+figure img {
+    aspect-ratio: 4 / 3;
+    border-radius: .125rem;
+    object-fit: cover;
+}
+
+img[src="gallery/rosy-maple-moth.png"] {
+    object-fit: contain;
+}
+
+h2 {
+    color: #1f6f63;
+    font-family: "reross-quadratic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: .98;
+    margin-bottom: .45rem;
+}
+
+p {
+    color: #141414;
+    font-size: 1rem;
+    margin-bottom: 1.45rem;
+    max-width: 38rem;
+}
+
+.lead-story {
+    border-bottom: 1px solid #dec8da;
+    margin-bottom: 1.75rem;
+    padding-bottom: 1.75rem;
+}
+
+.lead-story a {
+    display: block;
+    padding-left: 1rem;
+}
+
+.lead-story h2 {
+    color: #1f6f63;
+}
+
+.story-list article,
+.teasers article {
+    border-bottom: 1px solid #dec8da;
+    margin-bottom: 1.7rem;
+    padding: 0 0 1.7rem;
+}
+
+.story-list h2,
+.teasers h2 {
+    font-size: 1.32rem;
+    line-height: 1.02;
+}
+
+.story-list article:nth-of-type(2) h2,
+.story-list article:nth-of-type(4) h2 {
+    color: #f42ac4;
+}
+
+.story-list article:nth-of-type(3) h2 {
+    color: #1f6f63;
+}
+
+.lead-story a:hover h2,
+.story-list article a:hover h2,
+.teasers article a:hover h2,
+.side-notes article a:hover h2 {
+    color: #ffa6ef;
+}
+
+.story-list article:nth-of-type(3),
+.story-list article:nth-of-type(4),
+.story-list article:nth-of-type(5) {
+    margin-top: 1.5rem;
+}
+
+aside {
+    margin-top: 1.3rem;
+}
+
+main.gallery {
+    max-width: 58rem;
+    margin: 0 auto 2.35rem;
+}
+
+.gallery-intro {
+    margin-bottom: 1.35rem;
+}
+
+.gallery-intro h2 {
+    font-size: 2.15rem;
+}
+
+.gallery-stage {
+    overflow: hidden;
+    padding-bottom: calc(75% + 3rem);
+    position: relative;
+}
+
+.gallery-stage figure {
+    margin-bottom: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .4s;
+    width: 100%;
+}
+
+.gallery-stage img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.gallery-stage img[src="gallery/rosy-maple-moth.png"],
+.gallery-nav img[src="gallery/rosy-maple-moth.png"] {
+    object-fit: contain;
+    padding: 10%;
+}
+
+.gallery-stage figcaption {
+    color: #141414;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    margin: .45rem 0 0;
+}
+
+.gallery input:nth-of-type(1):checked ~ .gallery-stage figure:nth-of-type(1),
+.gallery input:nth-of-type(2):checked ~ .gallery-stage figure:nth-of-type(2),
+.gallery input:nth-of-type(3):checked ~ .gallery-stage figure:nth-of-type(3),
+.gallery input:nth-of-type(4):checked ~ .gallery-stage figure:nth-of-type(4),
+.gallery input:nth-of-type(5):checked ~ .gallery-stage figure:nth-of-type(5),
+.gallery input:nth-of-type(6):checked ~ .gallery-stage figure:nth-of-type(6),
+.gallery input:nth-of-type(7):checked ~ .gallery-stage figure:nth-of-type(7),
+.gallery input:nth-of-type(8):checked ~ .gallery-stage figure:nth-of-type(8) {
+    opacity: 1;
+}
+
+.gallery input {
+    display: none;
+}
+
+.gallery-nav {
+    display: grid;
+    gap: .35rem;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: .75rem;
+}
+
+.gallery-nav label {
+    cursor: pointer;
+    display: block;
+}
+
+.gallery-nav img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.side-notes {
+    padding-bottom: 2rem;
+}
+
+.side-notes article {
+    border-top: 1px solid #dec8da;
+    padding: .85rem 0 .25rem;
+}
+
+.side-notes h2 {
+    font-family: "ff-seria-sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: .02rem;
+    line-height: 1.15;
+}
+
+.side-notes p,
+.teasers p {
+    font-size: 1rem;
+}
+
+.side-notes p {
+    margin-bottom: .85rem;
+}
+
+article > h2 {
+    font-size: 2.8rem;
+    margin: .35rem 0 .6rem;
+}
+
+.container article > p {
+    font-size: 1.08rem;
+    line-height: 1.25;
+}
+
+figcaption {
+    color: #141414;
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 2.35rem;
+    max-width: 36rem;
+}
+
+footer {
+    border-top: 1px solid #dec8da;
+    background: #fff1ee;
+    color: #1f6f63;
+    padding: 1rem 0 1.75rem;
+}
+
+footer p {
+    color: #1f6f63;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+main.newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 2.35rem;
+}
+
+.signup h2 {
+    color: #1f6f63;
+    font-size: 2.4rem;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+    border-top: 1px solid #dec8da;
+    padding-top: 1.25rem;
+}
+
+.newsletter fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: .65rem;
+}
+
+.newsletter legend {
+    color: #1f6f63;
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: .02rem;
+    margin-bottom: .2rem;
+}
+
+.newsletter label[for="name"],
+.newsletter label[for="email"] {
+    color: #1f6f63;
+}
+
+.newsletter label {
+    color: #1f6f63;
+    font-family: "ff-seria-sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.newsletter input[type="text"],
+.newsletter input[type="email"] {
+    border: 1px solid #dec8da;
+    background: #ffffff;
+    color: #1f6f63;
+    font: inherit;
+    padding: .6rem;
+    min-height: 2.75rem;
+}
+
+.newsletter button {
+    align-self: flex-start;
+    border: 0;
+    background: #f42ac4;
+    color: #ffffe8;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 800;
+    min-height: 2.75rem;
+    padding: .7rem 1rem;
+}
+
+.newsletter button:hover {
+    background: #1f6f63;
+}
+
+@media only screen and (min-width: 40rem) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.9rem;
+    }
+
+    h1,
+    nav {
+        margin-bottom: 0;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+    }
+}
+
+@media only screen and (min-width: 60rem) {
+    div.container {
+        max-width: 82rem;
+        padding: 0 1.25rem;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-gap: 1.65rem;
+    }
+
+    div.container:has(main.gallery) {
+        display: block;
+    }
+
+    header,
+    footer {
+        grid-column: 1 / 3;
+    }
+
+    main.newsletter {
+        grid-column: 1 / 3;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .signup,
+    .signup-img {
+        flex: 1 1 0;
+    }
+
+    .newsletter form {
+        max-width: 34rem;
+    }
+
+    div.container:has(.lead-story) main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.65rem;
+    }
+
+    div.container:has(.lead-story) aside,
+    div.container aside {
+        margin-top: 0;
+    }
+
+    section.lead-story {
+        grid-column: 2 / 4;
+        grid-row: 1 / 3;
+        display: flex;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    section.lead-story a {
+        flex: 1 0 12rem;
+        display: flex;
+        flex-direction: column;
+        padding-left: 1.35rem;
+    }
+
+    section.lead-story a figure {
+        flex: 1 0 20rem;
+        display: flex;
+    }
+
+    section.lead-story a figure img {
+        aspect-ratio: auto;
+    }
+
+    section.lead-story a h2 {
+        flex: 0 0 auto;
+        font-size: 2.5rem;
+    }
+
+    section.lead-story a p {
+        flex: 0 0 auto;
+        max-width: 34rem;
+    }
+
+    .story-list {
+        display: contents;
+    }
+
+    .story-list article {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    .story-list article:nth-of-type(2) {
+        margin-top: 2.35rem;
+        transform: translateY(-1.95rem);
+    }
+
+    .story-list article:nth-of-type(3),
+    .story-list article:nth-of-type(4),
+    .story-list article:nth-of-type(5) {
+        grid-row: 3;
+        align-self: start;
+    }
+
+    .story-list article:nth-of-type(3) {
+        grid-column: 1 / 2;
+    }
+
+    .story-list article:nth-of-type(4) {
+        grid-column: 2 / 3;
+    }
+
+    .story-list article:nth-of-type(5) {
+        grid-column: 3 / 4;
+    }
+
+    .container article > figure:first-child img {
+        aspect-ratio: 16 / 9;
+    }
+
+    .container article > h2 {
+        font-size: 2.4rem;
+        max-width: 34rem;
+    }
+
+    .teasers article {
+        margin-bottom: 1.25rem;
+        padding-bottom: 1.25rem;
+    }
+}
+
+
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background: #124e45;
+        color: #fff1ee;
+    }
+
+    nav ul li a {
+        background: #124e45;
+        color: #fff1ee;
+    }
+
+    h2,
+    .lead-story h2,
+    .story-list article:nth-of-type(3) h2,
+    a,
+    footer p,
+    .newsletter legend,
+    .newsletter label,
+    .newsletter label[for="name"],
+    .newsletter label[for="email"] {
+        color: #d4f4ea;
+    }
+
+    p,
+    figcaption,
+    .gallery-stage figcaption {
+        color: #fbfbfb;
+    }
+
+
+    header,
+    footer,
+    .lead-story,
+    .story-list article,
+    .teasers article,
+    .side-notes article,
+    .newsletter form {
+        border-color: #fff1ee;
+    }
+
+    footer {
+        background: #124e45;
+        color: #fff1ee;
+    }
+
+    .newsletter input[type="text"],
+    .newsletter input[type="email"] {
+        background: #fff1ee;
+        color: #124e45;
+    }
+
+    nav ul li a:hover {
+        color: #f2b7d4;
+    }
+
+    .story-list article:nth-of-type(2) h2,
+    .story-list article:nth-of-type(4) h2 {
+        color: #f2b7d4;
+    }
+
+    h1 {  
+        background-image: url("logo_light.svg");  
+        background-repeat: no-repeat;  
+        background-size: contain;  
+    }  
+
+    h1 img {  
+        opacity: 0;  
+    }  
+
+    .signup h2 {
+        color: #a9d9d2;
+        font-size: 2.4rem;
+    }
+
+    .newsletter fieldset label {
+        color:#fee1ef;
+    }
+
+    .newsletter button {
+        background: #fff1ee;
+        color: #1f6f63;
+    }
+
+    .newsletter button:hover {
+        background: #f2b7d4;
+        color: #1f6f63;
+    }
+
+    .lead-story a:hover h2,
+    .story-list article a:hover h2,
+    .teasers article a:hover h2,
+    .side-notes article a:hover h2 {
+        color: #d7ff9a;
+    }
+
+
+}
